@@ -1,10 +1,9 @@
 # Automação de Tarefas com Python
 
 Este repositório contém scripts Python desenvolvidos como parte da **Jornada Python**, um intensivo de 4 dias. Este projeto corresponde à **Aula 1** do programa. O objetivo do "case" desta aula foi criar um script para cadastrar produtos em um sistema de uma empresa (já existente nos dados fornecidos).
+O projeto utiliza `PyAutoGUI` para simular interações do usuário (cliques e digitação) e `pandas` para manipulação de dados.
 
 > **Objetivo:** Este projeto também serviu como prática para treinar automação de tarefas com Python, simulação de interações com sistemas web e manipulação de dados automatizada.
-
-O projeto utiliza `PyAutoGUI` para simular interações do usuário (cliques e digitação) e `pandas` para manipulação de dados.
 
 ---
 
