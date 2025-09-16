@@ -1,6 +1,7 @@
 import pyautogui
 import time
 import pandas as pd
+from winotify import Notification, audio
 
 def abrir_navegador(site, navegador):
     pyautogui.press("win")
@@ -15,7 +16,7 @@ def abrir_navegador(site, navegador):
 
 def login(email, senha):
     """Realiza login no site"""
-    pyautogui.click(531, 352)
+    pyautogui.click(794, 373)
     pyautogui.write(email)
     pyautogui.press("tab")
     pyautogui.write(senha)
@@ -24,7 +25,7 @@ def login(email, senha):
     time.sleep(2)
 
 def cadastrar_produto(produto):
-    pyautogui.click(509, 243)
+    pyautogui.click(780, 258)
 
     campos = ["codigo", "marca", "tipo", "categoria", "preco_unitario", "custo", "obs"]
 
@@ -51,6 +52,15 @@ abrir_navegador(site, navegador)
 login(email, senha)
 
 tabela = pd.read_csv("produtos.csv")
+
+notificacao = Notification(
+    app_id="Iniciando cadastros.",
+    title="Para desativar a automação, posicione o mouse no canto superior esquerdo por alguns segundos."
+)
+notificacao.set_audio(audio.Default, loop=False)
+notificacao.show()
+
+time.sleep(2)
 
 for _, produto in tabela.iterrows():
     cadastrar_produto(produto)

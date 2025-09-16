@@ -2,10 +2,10 @@ import pyautogui
 import time
 from winotify import Notification, audio
 
-
-
-
-notificacao = Notification (app_id="Pegar posição do mouse", title="Posicione o mouse no local desejado e aguarde.")
+notificacao = Notification(
+    app_id="Pegar posição do mouse",
+    title="Posicione o mouse no local desejado e aguarde 5 segundos."
+)
 notificacao.set_audio(audio.Default, loop=False)
 notificacao.show()
 
